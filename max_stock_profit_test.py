@@ -21,17 +21,25 @@ class MaxStockProfitTests(unittest.TestCase):
         self.assertEqual(msp.maxStockProfit(test_prices), 79)
 
     def testMaxStockProfit5(self):
-        test_prices = [2, 3, 10, 6, 4, 8, 1]
-        self.assertEqual(msp.maxStockProfit(test_prices), 8)
-
-    def testMaxStockProfit6(self):
-        test_prices = [7,9,5,6,3,2]
-        self.assertEqual(msp.maxStockProfit(test_prices), 2)
-
-    def testMaxStockProfit7(self):
         test_prices = [1,2,3,4,5,6]
         self.assertEqual(msp.maxStockProfit(test_prices), 5)
 
-    def testMaxStockProfit7(self):
+    def testMaxStockProfit6(self):
         test_prices = [7,6,5,4,3,2]
         self.assertEqual(msp.maxStockProfit(test_prices), 0)
+
+    def testMaxStockProfit7(self):
+        test_prices = [7,7,7,7,7,7,7]
+        self.assertEqual(msp.maxStockProfit(test_prices), 0)
+
+    def testMaxStockProfit8(self):
+        test_prices = [1,2,3,4,5,4,3,2,1]
+        self.assertEqual(msp.maxStockProfit(test_prices), 4)
+
+    def testMaxStockProfit9(self):
+        test_prices = []
+        self.assertEqual(msp.maxStockProfit(test_prices), 0)
+
+    def testMaxStockProfit10(self):
+        test_prices = [100, 98, 97, 98, 97, 98, 99, 100, 110, 100, 108, 99, 98]
+        self.assertEqual(msp.maxStockProfit(test_prices), 13)

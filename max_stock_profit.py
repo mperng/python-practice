@@ -7,7 +7,7 @@ maximum at the top of the local_maxima list.
 
 Performance:
 Algorithm runs in O(N) time and takes O(N) space. Since the stock market opens
-at 9:30am and closes at 4pm, the space taken by the local_maxima list does not
+at 9:30am and closes at 4pm, the space taken by the local_maxima list will not
 exceed 390 in size (assuming the prices list is minute-by-minute as shown in
 the example).
 """

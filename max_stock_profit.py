@@ -11,10 +11,12 @@ at 9:30am and closes at 4pm, the space taken by the local_maxima list will not
 exceed 390 in size (assuming the prices list is minute-by-minute as shown in
 the example).
 """
+
+
 def maxStockProfit(prices=[]):
     # return list of tuples of index, value for local maximum values in the
     # prices list
-    local_maxima = filter(lambda x : isLocalMax(x[0], x[1], prices),
+    local_maxima = filter(lambda x: isLocalMax(x[0], x[1], prices),
                           enumerate(prices))
     if not prices or not local_maxima:
         return 0
@@ -28,6 +30,7 @@ def maxStockProfit(prices=[]):
         minPrice = min(minPrice, value)
         maxProfit = max(maxProfit, local_maxima[0][1]-minPrice)
     return maxProfit
+
 
 def isLocalMax(index, value, prices):
     if index == 0:
